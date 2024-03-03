@@ -9,6 +9,8 @@ function encryptText() {
         .replace(/o/g, 'ober')
         .replace(/u/g, 'ufat');
     resultTextArea.value = encryptedText;
+    var inputElement = document.getElementById('inputTextArea');
+    inputElement.value = '';
 }
 
 function decryptText() {
@@ -21,9 +23,7 @@ function decryptText() {
         .replace(/imes/g, 'i')
         .replace(/enter/g, 'e');
     resultTextArea.value = decryptedText;
-}
-
-function limpiarTextarea() {
     var inputElement = document.getElementById('inputTextArea');
     inputElement.value = '';
 }
+
