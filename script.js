@@ -1,3 +1,4 @@
+
 function encryptText() {
     var inputText = document.getElementById('inputTextArea').value;
     var resultTextArea = document.getElementById('result');
@@ -23,5 +24,6 @@ function decryptText() {
 }
 
 function limpiarTextarea() {
-    document.getElementById('input').value = '';
+    var inputElement = document.getElementById('inputTextArea');
+    inputElement.value = '';
 }

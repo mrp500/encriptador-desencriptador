@@ -5,7 +5,7 @@
     <head>
         <link rel="stylesheet" href="reset.css">
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Encriptador/Desencriptador</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,8 +28,8 @@
                 <textarea id="inputTextArea" rows="18" cols="40" placeholder="Ingrese texto aquí" class="campotransparente-uno"></textarea>
                 <p>Solo letras minusculas y sin acentos</p>
                 <div style="text-align: center;">
-                    <button class="button-uno" onclick="encryptText(); limpiarTextarea();">Encriptar!</button>
-                    <button class="button-dos" onclick="decryptText(); limpiarTextarea();">Desencriptar!</button>
+                    <button class="button-uno" onclick="encryptText(), limpiarTextarea()">Encriptar!</button>
+                    <button class="button-dos" onclick="decryptText(), limpiarTextarea();">Desencriptar!</button>
                 </div>
             </div>
             <div class="output"><textarea id="result" rows="18" cols="32" class="campotransparente-dos"></textarea><br>
