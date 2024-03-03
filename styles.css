@@ -122,7 +122,7 @@ p {
 }
 
 .button-dos:hover {
-    background-color: rgb(233, 87, 19); /* Puedes utilizar cualquier color deseado */
+    background-color: rgb(207, 66, 0);/* Puedes utilizar cualquier color deseado */
 }
 
 .button-tres {
@@ -142,7 +142,7 @@ p {
 }
 
 .button-tres:hover {
-    background-color: rgb(233, 87, 19); /* Puedes utilizar cualquier color deseado */
+    background-color: rgb(207, 66, 0); /* Puedes utilizar cualquier color deseado */
 }
 
 @media screen and (max-width: 720px) {
