@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Encriptador/Desencriptador</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -17,21 +17,25 @@
                 var copyText = document.getElementById('result');
                 copyText.select();
                 document.execCommand('copy');
-                alert('Texto copiado: ' + copyText.value);
             }
         </script>
     </head>
     <body>
-        <h1>Encriptador/Desencriptador</h1>
+        <h1>Encriptador<br>
+            Desencriptador</h1>
         <label for="inputTextArea"></label>
-            <div>
-                <textarea id="inputTextArea" rows="4" cols="50" placeholder="Ingrese texto aquí"></textarea>
+            <div class="input">
+                <textarea id="inputTextArea" rows="18" cols="40" placeholder="Ingrese texto aquí" class="campotransparente-uno"></textarea>
                 <p>Solo letras minusculas y sin acentos</p>
-                <button onclick="encryptText()">Encriptar!</button>
-                <button onclick="decryptText()">Desencriptar!</button>
+                <div style="text-align: center;">
+                    <button class="button-uno" onclick="encryptText(); limpiarTextarea();">Encriptar!</button>
+                    <button class="button-dos" onclick="decryptText(); limpiarTextarea();">Desencriptar!</button>
+                </div>
             </div>
-            <div><textarea id="result" rows="4" cols="50"></textarea><br>
-                <button onclick="copyText()">Copiar</button>
+            <div class="output"><textarea id="result" rows="18" cols="32" class="campotransparente-dos"></textarea><br>
+                <div style="text-align: center;">
+                    <button class="button-tres" onclick="copyText();">Copiar</button>
+                </div>
             </div>
     </body>
 </html>

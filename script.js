@@ -21,3 +21,7 @@ function decryptText() {
         .replace(/enter/g, 'e');
     resultTextArea.value = decryptedText;
 }
+
+function limpiarTextarea() {
+    document.getElementById('inputTextArea').value = ''; // 'result' es el ID del textarea que quieres limpiar
+}
