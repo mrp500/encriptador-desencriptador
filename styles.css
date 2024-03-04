@@ -17,6 +17,10 @@ h1 {
     height: 60px;
     transform: translate(0px, 35px);
     filter: invert(58%) sepia(34%) saturate(841%) hue-rotate(189deg) brightness(115%) contrast(101%);
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+        user-select: none;
 }
 
 body {
@@ -98,6 +102,10 @@ body {
     position: absolute;
     margin-left: 7% ;
     margin-top: 5%;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+        user-select: none;
 }
 
 p {
@@ -248,7 +256,7 @@ p {
     }
 
     .detective {
-        margin: 10% 13%;
+        margin: 10% 12%;
     }
 
 }
