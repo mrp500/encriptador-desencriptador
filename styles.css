@@ -89,6 +89,17 @@ body {
     display: none;
 }
 
+.detective {
+    display: flex;
+    opacity: 75%;
+    width: 240px;
+    height: 240px;
+    filter: invert(12%) sepia(92%) saturate(2487%) hue-rotate(242deg) brightness(84%) contrast(138%);
+    position: absolute;
+    margin-left: 7% ;
+    margin-top: 5%;
+}
+
 p {
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
@@ -123,7 +134,7 @@ p {
 }
 
 .button-uno:hover {
-    background-color: rgb(207, 66, 0); /* Puedes utilizar cualquier color deseado */
+    background-color: rgb(207, 66, 0);
 }
 
 .button-dos {
@@ -234,6 +245,10 @@ p {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
             box-sizing: border-box;
+    }
+
+    .detective {
+        margin: 10% 13%;
     }
 
 }
