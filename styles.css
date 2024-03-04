@@ -173,10 +173,7 @@ p {
 @media screen and (max-width: 720px) {
     
     .candado {
-        width: 60px;
-        height: 60px;
         transform: translate(0px, 35px);
-        filter: invert(58%) sepia(34%) saturate(841%) hue-rotate(189deg) brightness(115%) contrast(101%);
     }
 
     .Encriptador {
