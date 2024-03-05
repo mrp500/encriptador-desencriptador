@@ -27,7 +27,7 @@
         </h1>
         <label for="inputTextArea"></label>
             <div class="input">
-                <textarea id="inputTextArea" rows="18" cols="40" placeholder="Ingrese texto aquí" class="campotransparente-uno"></textarea>
+                <textarea id="inputTextArea" rows="19" cols="32" placeholder="Ingrese texto aquí" class="campotransparente-uno"></textarea>
                 <p>
                     <img class="circulo-exclamacion" src="imagenes/circulo-exclamacion-cierre.svg" alt="Circulo-Exclamacion">
                     Solo letras minusculas y sin acentos
@@ -39,10 +39,10 @@
             </div>
                 <div class="output">
                     <div class="detective">
-                        <img id="hideable-image" src="imagenes/detective.svg" draggable="false" oncontextmenu="return false" alt="Detective" onclick="hideImageAndFocusTextarea();">
+                        <img id="clickable-image" src="imagenes/detective.svg" draggable="false" oncontextmenu="return false" alt="Detective" onclick="convertToTextArea();">
                     </div>
-                    <textarea id="result" rows="18" cols="32" class="campotransparente-dos" onclick="hideImageAndFocusTextarea();"></textarea><br>
-                <div style="text-align: center;">
+                    <textarea id="result" rows="20" cols="32" class="campotransparente-dos" onclick="convertToTextArea();"></textarea><br>
+                <div class="divbutton-tres">
                     <button class="button-tres" onclick="copyText();">Copiar</button>
                 </div>
             </div>

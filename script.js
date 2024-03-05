@@ -12,7 +12,7 @@ function encryptText() {
     resultTextArea.value = encryptedText;
     var inputElement = document.getElementById('inputTextArea');
     inputElement.value = '';
-    document.getElementById('hideable-image').style.display = 'none';
+    document.getElementById('clickable-image').style.display = 'none';
     } else {
         var inputElement = document.getElementById('inputTextArea');
         inputElement.focus();
@@ -32,7 +32,7 @@ function decryptText() {
     resultTextArea.value = decryptedText;
     var inputElement = document.getElementById('inputTextArea');
     inputElement.value = '';
-    document.getElementById('hideable-image').style.display = 'none';
+    document.getElementById('clickable-image').style.display = 'none';
     } else {
         var inputElement = document.getElementById('inputTextArea');
         inputElement.focus();
@@ -40,23 +40,31 @@ function decryptText() {
 }
 
 document.querySelector('.button-tres').addEventListener('click', function() {
-    var image = document.getElementById('hideable-image');
+    var image = document.getElementById('clickable-image');
     image.style.display = 'none'; 
 });
 
+function convertToTextArea() {
+    var image = document.getElementById('clickable-image');
+    var textArea = document.getElementById('result');
+    image.style.display = 'none';
+    textArea.style.display = 'block';
+    textArea.focus();
+}
+
 
 function hideImageAndFocusTextarea(event) {
-    var image = document.getElementById('hideable-image');
+    var image = document.getElementById('clickable-image');
     var textarea = document.getElementById('result');
     image.style.display = 'none';
     textarea.focus(); 
 }
 
-document.getElementById('hideable-image').onclick = hideImageAndFocusTextarea;
+document.getElementById('clickable-image').onclick = hideImageAndFocusTextarea;
 
 document.getElementById('result').addEventListener('blur', function() {
     var resultTextArea = document.getElementById('result');
-    var image = document.getElementById('hideable-image');
+    var image = document.getElementById('clickable-image');
     if (resultTextArea.value.trim() === '') {
         image.style.display = 'block'; 
     }
