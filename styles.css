@@ -8,7 +8,7 @@ h1 {
     font-weight: bold;
 }
 
-.Desencriptador {
+.desencriptador {
     margin-left: 68px;
 }
 
@@ -95,7 +95,7 @@ body {
 
 .detective {
     display: flex;
-    opacity: 75%;
+    opacity: 40%;
     width: 240px;
     height: 240px;
     filter: invert(12%) sepia(92%) saturate(2487%) hue-rotate(242deg) brightness(84%) contrast(138%);
@@ -195,11 +195,11 @@ p {
         transform: translate(0px, 35px);
     }
 
-    .Encriptador {
+    .encriptador {
         margin-right: 80px;
     }
     
-    .Desencriptador {
+    .desencriptador {
         margin-left: 40px;
     }
 
@@ -244,18 +244,17 @@ p {
     }
 
     .campotransparente-dos {
+        display: block;
         line-height: 1;
-        display: block;
-        display: block;
         width: 100%;
         margin: 0;
-        padding: 15px;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
             box-sizing: border-box;
     }
 
     .detective {
+        opacity: 30%;
         margin: 10% 12%;
     }
 

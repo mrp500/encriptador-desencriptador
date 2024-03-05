@@ -63,4 +63,3 @@ document.getElementById('result').addEventListener('blur', function() {
 });
 
 document.getElementById('result').onblur = showImageIfNoFocus;
-
