@@ -1,3 +1,21 @@
+document.getElementById('clickable-image').addEventListener('click', function() {
+    document.querySelector('.button-tres').style.visibility = 'visible';
+});
+
+document.getElementById('result').addEventListener('click', function() {
+    document.querySelector('.button-tres').style.visibility = 'visible';
+});
+console.log()
+
+document.getElementById('result').addEventListener('blur', function() {
+    var resultTextArea = document.getElementById('result');
+    var image = document.getElementById('clickable-image');
+    var button = document.querySelector('.button-tres');
+    if (resultTextArea.value.trim() === '') {
+        image.style.display = 'block';
+        button.style.visibility = 'hidden';
+    }
+});
 
 function encryptText() {
     var inputText = document.getElementById('inputTextArea').value;
@@ -9,10 +27,11 @@ function encryptText() {
             .replace(/a/g, 'ai')
             .replace(/o/g, 'ober')
             .replace(/u/g, 'ufat');
-    resultTextArea.value = encryptedText;
-    var inputElement = document.getElementById('inputTextArea');
-    inputElement.value = '';
-    document.getElementById('clickable-image').style.display = 'none';
+        resultTextArea.value = encryptedText;
+        var inputElement = document.getElementById('inputTextArea');
+        inputElement.value = '';
+        document.querySelector('.button-tres').style.visibility = 'visible';
+        document.getElementById('clickable-image').style.display = 'none';
     } else {
         var inputElement = document.getElementById('inputTextArea');
         inputElement.focus();
@@ -32,6 +51,7 @@ function decryptText() {
     resultTextArea.value = decryptedText;
     var inputElement = document.getElementById('inputTextArea');
     inputElement.value = '';
+    document.querySelector('.button-tres').style.visibility = 'visible';
     document.getElementById('clickable-image').style.display = 'none';
     } else {
         var inputElement = document.getElementById('inputTextArea');
@@ -43,6 +63,7 @@ document.querySelector('.button-tres').addEventListener('click', function() {
     var image = document.getElementById('clickable-image');
     image.style.display = 'none'; 
 });
+
 
 function convertToTextArea() {
     var image = document.getElementById('clickable-image');
@@ -70,4 +91,3 @@ document.getElementById('result').addEventListener('blur', function() {
     }
 });
 
-document.getElementById('result').onblur = showImageIfNoFocus;

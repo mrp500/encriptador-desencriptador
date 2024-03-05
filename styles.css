@@ -181,6 +181,10 @@ p {
     
 }
 
+.divbutton-tres {
+    visibility: hidden; /* Ocultar el botón inicialmente */
+}
+
 .button-tres {
     width: 120px;
     height: 40px;
@@ -231,7 +235,6 @@ p {
         float: none;
         width: auto;
         padding: 0px;
-        margin: 0;
     }
 
     .campotransparente-uno {
