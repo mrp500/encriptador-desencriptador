@@ -6,6 +6,12 @@ h1 {
     margin-top: 10px;
     margin-bottom: 20px;
     font-weight: bold;
+    pointer-events: none;
+    user-select: none; 
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+        user-select: none;
 }
 
 .desencriptador {
@@ -17,6 +23,8 @@ h1 {
     height: 60px;
     transform: translate(0px, 35px);
     filter: invert(58%) sepia(34%) saturate(841%) hue-rotate(189deg) brightness(115%) contrast(101%);
+    pointer-events: none;
+    user-select: none; 
     -webkit-user-select: none;
     -moz-user-select: none; 
     -ms-user-select: none; 
@@ -40,11 +48,17 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     background-color: none;
+    user-select: none; 
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+        user-select: none;
 }
 
 .campotransparente-uno::placeholder {
     color:  rgb(82, 142, 255, 0.75);
-
+    pointer-events: none;
+    user-select: none; 
 }
 
 .output {
@@ -60,6 +74,11 @@ body {
     background-color: none;
     border-radius: 50px;
     box-shadow: 2px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    user-select: none; 
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+        user-select: none;
 }
 
 .campotransparente-uno {
@@ -107,10 +126,7 @@ body {
     position: absolute;
     margin-left: 6%;
     margin-top: 6%;
-    -webkit-user-select: none;
-    -moz-user-select: none; 
-    -ms-user-select: none; 
-        user-select: none;
+    pointer-events: none;
 }
 
 p {
@@ -119,6 +135,12 @@ p {
     margin-top: 15px;
     margin-bottom: 10px;
     text-align: center;
+    pointer-events: none;
+    user-select: none; 
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+        user-select: none;
 }
 
 .circulo-exclamacion {
@@ -148,7 +170,9 @@ p {
 }
 
 .button-uno:hover {
+    transition: 0.1s all;
     background-color: rgb(207, 66, 0);
+    transform: scale(1.1);
 }
 
 .button-dos {
@@ -170,7 +194,9 @@ p {
 }
 
 .button-dos:hover {
+    transition: 0.1s all;
     background-color: rgb(207, 66, 0);
+    transform: scale(1.1);
 }
 
 .divbutton-tres {
@@ -204,7 +230,9 @@ p {
 }
 
 .button-tres:hover {
-    background-color: rgb(207, 66, 0); /* Puedes utilizar cualquier color deseado */
+    transition: 0.1s all;
+    background-color: rgb(207, 66, 0);
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 720px) {

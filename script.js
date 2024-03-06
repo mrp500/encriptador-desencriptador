@@ -1,12 +1,3 @@
-document.getElementById('clickable-image').addEventListener('click', function() {
-    document.querySelector('.button-tres').style.visibility = 'visible';
-});
-
-document.getElementById('result').addEventListener('click', function() {
-    document.querySelector('.button-tres').style.visibility = 'visible';
-});
-console.log()
-
 document.getElementById('result').addEventListener('blur', function() {
     var resultTextArea = document.getElementById('result');
     var image = document.getElementById('clickable-image');
@@ -59,35 +50,48 @@ function decryptText() {
     }
 }
 
-document.querySelector('.button-tres').addEventListener('click', function() {
+document.getElementById('result').addEventListener('input', function() {
     var image = document.getElementById('clickable-image');
-    image.style.display = 'none'; 
-});
-
-
-function convertToTextArea() {
-    var image = document.getElementById('clickable-image');
-    var textArea = document.getElementById('result');
-    image.style.display = 'none';
-    textArea.style.display = 'block';
-    textArea.focus();
-}
-
-
-function hideImageAndFocusTextarea(event) {
-    var image = document.getElementById('clickable-image');
-    var textarea = document.getElementById('result');
-    image.style.display = 'none';
-    textarea.focus(); 
-}
-
-document.getElementById('clickable-image').onclick = hideImageAndFocusTextarea;
-
-document.getElementById('result').addEventListener('blur', function() {
     var resultTextArea = document.getElementById('result');
-    var image = document.getElementById('clickable-image');
-    if (resultTextArea.value.trim() === '') {
+    if (resultTextArea.value.trim() !== '') {
+        image.style.display = 'none'; 
+    } else {
         image.style.display = 'block'; 
     }
 });
 
+/*document.getElementById('result').addEventListener('input', function() {
+    var button = document.querySelector('.button-tres');
+    var resultTextArea = document.getElementById('result');
+    if (resultTextArea.value.trim() !== '') {
+        button.style.visibility = 'visible'; // Hacer visible el botón cuando se empiece a escribir en el área de texto
+    } else {
+        button.style.visibility = 'hidden'; // Ocultar el botón si el área de texto está vacía
+    }
+});*/
+
+document.getElementById('result').addEventListener('input', function() {
+    var image = document.getElementById('clickable-image');
+    var button = document.querySelector('.button-tres');
+    var resultTextArea = document.getElementById('result');
+    if (resultTextArea.value.trim() !== '') {
+        button.style.visibility = 'visible';
+        image.style.display = 'none'; // Ocultar la imagen del detective si el área de texto tiene cualquier tipo de actividad
+    } else {
+        button.style.visibility = 'hidden';
+        image.style.display = 'block'; // Mostrar la imagen del detective si el área de texto está vacía
+    }
+});
+
+document.getElementById('result').addEventListener('change', function() {
+    var image = document.getElementById('clickable-image');
+    var button = document.querySelector('.button-tres');
+    var resultTextArea = document.getElementById('result');
+    if (resultTextArea.value.trim() !== '') {
+        button.style.visibility = 'visible';
+        image.style.display = 'none'; // Ocultar la imagen del detective si el área de texto tiene cualquier tipo de actividad
+    } else {
+        button.style.visibility = 'hidden';
+        image.style.display = 'block'; // Mostrar la imagen del detective si el área de texto está vacía
+    }
+});
